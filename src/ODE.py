@@ -13,6 +13,7 @@ Python 3
 import logging
 from sys import stdout
 from datetime import datetime
+import os
 
 logging.basicConfig(
     level=logging.INFO,
@@ -20,8 +21,7 @@ logging.basicConfig(
     stream=stdout,
     datefmt="%m-%d %H:%M:%S",
 )
-logging.info(datetime.now())
-
+logging.info(f"{os.getlogin()}| {datetime.now()}")
 
 # ----------------------------- #### --------------------------
 from typing import Callable
